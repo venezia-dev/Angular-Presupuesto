@@ -6,8 +6,12 @@
     border-radius: 1em;
 }
 
-.description, .value, .done {
+.description, .value{
     margin-left: 1em;
     margin-right: 1em;
     max-width: 15em;
+}
+
+.done {
+    margin-left: 2em;
 }
