@@ -1,0 +1,17 @@
+<mat-card class="egreso">
+    <mat-card-header>
+        <mat-card-title><button mat-raised-button color="warn">EGRESOS</button></mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <div *ngFor="let egreso of egresos" class="egresos">
+            {{egreso.description}} -
+            <span class="value">{{egreso.value | currency: 'ARS':'$':'1.2-2'}}</span> 
+            <div class="egresoPorcentaje">{{calcPorcentaje(egreso) | percent}}</div>
+            <button class="egresoDeleteBtn" 
+                (click)="deleteRegister(egreso)">
+                <mat-icon>delete</mat-icon>
+            </button>
+        </div>
+
+    </mat-card-content>
+</mat-card>

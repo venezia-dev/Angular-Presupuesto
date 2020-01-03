@@ -1,0 +1,37 @@
+.egreso {
+    width: 20em;
+    padding: 1em;
+    background: #FFAB91;
+    border: 1px solid;
+    border-radius: 1em;
+}
+
+.egresos {
+    padding: 0.7em;
+    text-align: justify;
+}
+
+.value {
+    color: red;
+}
+
+.egresoPorcentaje {
+    float: right;
+    margin-left: 5px;
+    font-size: 11px;
+    background-color: #FFDAD9;
+    padding: 3px;
+    border-radius: 3px;
+    width: 32px;
+    text-align: center;
+    color: #FF5049;
+}
+
+.egresoDeleteBtn {
+    font-size: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: inline;
+    line-height: 1;
+}

@@ -1,0 +1,19 @@
+<mat-card class="header">
+    <mat-card-header>
+        <mat-card-title><b>Calcular Presupuesto</b></mat-card-title>
+    </mat-card-header>
+    <mat-card-content fxLayout="row wrap" fxLayoutAlign="start center" fxLayoutGap="10px">
+        <button mat-flat-button color="primary" class="total">
+            Total: {{presupuestoTotal | currency: 'ARS':'$':'1.2-2'}}
+        </button>
+        <button mat-flat-button color="accent" class="ingresos">
+            Ingresos: {{ingresoTotal | currency: 'ARS':'$':'1.2-2'}}
+        </button>
+        <button mat-flat-button color="warn" class="egresos" >
+            Egresos: - {{egresoTotal | currency: 'ARS':'$':'1.2-2'}} ({{porcentajeTotal | percent}})
+        </button>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-raised-button (click)="resetTotal()" color="primary">Reiniciar</button>
+    </mat-card-actions>
+</mat-card>

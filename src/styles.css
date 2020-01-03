@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { 
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background: url(assets/doodles.png);
+ }
+
+.mat-card {
+    text-align: center;
+}
+
+.mat-card-header{
+    justify-content: center;
+}
+
+.mat-icon {
+    vertical-align: middle;
+ }

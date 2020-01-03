@@ -1,0 +1,13 @@
+.form {
+    max-width: 50em;
+    padding: 2em;
+    background: #EFEBE9;
+    border: 1px solid;
+    border-radius: 1em;
+}
+
+.description, .value, .done {
+    margin-left: 1em;
+    margin-right: 1em;
+    max-width: 15em;
+}

@@ -1,0 +1,26 @@
+.ingreso {
+    width: 20em;
+    padding: 1em;
+    background: #FFAB91;
+    border: 1px solid;
+    border-radius: 1em;
+}
+
+.ingresos {
+    padding: 0.7em;
+    text-align: justify;
+}
+
+.value {
+    color: #095e2f;
+}
+
+.ingresoDeleteBtn {
+    font-size: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: inline;
+    line-height: 1;
+}
+

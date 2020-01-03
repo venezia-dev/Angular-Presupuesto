@@ -1,0 +1,32 @@
+<mat-card class="form">
+    <mat-card-header><b>Formulario</b></mat-card-header>
+    <form (ngSubmit)="f.form.valid && addValue()" #f="ngForm">
+        <mat-form-field>
+            <mat-label>Ingresos / Egresos</mat-label>
+            <mat-select (selectionChange)="operation($event.value)">
+                <mat-option value="ingresoOperation" selected>
+                    Ingreso
+                </mat-option>
+                <mat-option value="egresoOperation">
+                    Egreso
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field class="description">
+            <input matInput
+            type="text" name="description"
+            [(ngModel)]="description"
+            [ngClass]="{}"
+            placeholder="Agregar Descripción" maxlength="20" required>
+        </mat-form-field>
+        <mat-form-field class="value">
+            <input matInput
+            type="number" name="value"
+            [(ngModel)]="value"
+            placeholder="Agregar Valor" maxlength="12" required>
+        </mat-form-field>
+        <button type="submit" mat-fab color="primary" class="done">
+            <mat-icon>done</mat-icon>
+        </button>
+    </form>
+</mat-card>
