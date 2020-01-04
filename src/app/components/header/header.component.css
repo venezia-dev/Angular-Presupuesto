@@ -1,20 +1,20 @@
 .header {
-    margin-top: 10px;
     max-width: 50em;
     padding: 2em;
     background: #FFAB91;
     border: 1px solid;
     border-radius: 1em;
-  }
+    padding-left: 2em;
+}
   
-.example-header-image {
-  background-image: url('src/assets/vdlogo.png');
-  background-size: cover;
+.total {
+  text-align: center;
+  padding: 1em;
+  font-size: 1.2em;
 }
 
-.total,.ingresos,.egresos {
-  padding: 0.8em;
-  width: 15em;
-  width: 15em;
-  font-size: 1.2em;
+.ingresos,.egresos {
+  padding: 0.7em;
+  width: 20em;
+  font-size: 1.1em;
 }

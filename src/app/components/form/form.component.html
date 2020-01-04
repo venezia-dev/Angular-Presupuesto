@@ -1,6 +1,6 @@
 <mat-card class="form">
     <mat-card-header><b>Formulario</b></mat-card-header>
-    <form (ngSubmit)="f.form.valid && addValue()" #f="ngForm">
+    <form (ngSubmit)="f.form.valid && addValue(); f.reset()" #f="ngForm">
         <mat-form-field>
             <mat-label>Ingresos / Egresos</mat-label>
             <mat-select (selectionChange)="operation($event.value)">

@@ -1,13 +1,9 @@
 <div fxLayout="column" fxLayoutAlign="space-around center">
     <div class="content header" fxLayout="row" fxLayout.xs="column">
-        <app-header
-        [presupuestoTotal]="getPresupuestoTotal()"
-        [ingresoTotal]="getIngresoTotal()"
-        [egresoTotal]="getEgresoTotal()"
-        [porcentajeTotal]="getPorcentajeTotal()"
-        ></app-header>
+        <app-header [presupuestoTotal]="getPresupuestoTotal()" [ingresoTotal]="getIngresoTotal()"
+            [egresoTotal]="getEgresoTotal()" [porcentajeTotal]="getPorcentajeTotal()"></app-header>
     </div>
-    <div class="content form" fxLayout="row" >
+    <div class="content form" fxLayout="row">
         <app-form></app-form>
     </div>
     <div class="content resumen" fxLayout="row" fxLayout.xs="column">
@@ -15,15 +11,12 @@
             <app-ingreso></app-ingreso>
         </div>
         <div fxFlex="50" class="egresos">
-            <app-egreso
-                [ingresoTotal]="getIngresoTotal()"
-            ></app-egreso>
+            <app-egreso [ingresoTotal]="getIngresoTotal()"></app-egreso>
         </div>
     </div>
-    <div class="content form" fxLayout="row" >
+    <div class="content form" fxLayout="row">
         <app-footer></app-footer>
     </div>
 </div>
 
 <router-outlet></router-outlet>
-
