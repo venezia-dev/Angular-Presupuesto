@@ -1,9 +1,6 @@
 .form {
     max-width: 50em;
     padding: 2em;
-    background: #FFAB91;
-    border: 1px solid;
-    border-radius: 1em;
 }
 
 .select, .description, .value{
