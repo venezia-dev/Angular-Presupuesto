@@ -6,6 +6,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from './material.module';
+import { ToastrModule } from 'ngx-toastr';
 //Components
 import { AppComponent } from './app.component';
 import { IngresoComponent } from './components/ingreso/ingreso.component';
@@ -32,7 +33,8 @@ import { IngresoService } from './components/ingreso/ingreso.service';
     AppRoutingModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
-    MaterialModule
+    MaterialModule,
+    ToastrModule.forRoot()
   ],
   providers: [IngresoService,EgresoService],
   bootstrap: [AppComponent]

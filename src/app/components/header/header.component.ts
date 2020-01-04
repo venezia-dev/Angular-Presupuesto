@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { EgresoService } from '../egreso/egreso.service';
 import { IngresoService } from '../ingreso/ingreso.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-header',
@@ -15,8 +16,11 @@ export class HeaderComponent implements OnInit {
   @Input() porcentajeTotal: number;
 
 
-  constructor(private ingresoService: IngresoService,
-    private egresoService: EgresoService) { }
+  constructor(
+    private ingresoService: IngresoService,
+    private egresoService: EgresoService,
+    private toastrService: ToastrService
+    ) { }
 
   ngOnInit() {
   }
@@ -24,6 +28,9 @@ export class HeaderComponent implements OnInit {
   resetTotal(){
     this.ingresoService.deleteIngresos();
     this.egresoService.deleteEgresos();
+    this.toastrService.info('Todos Los Registros', 'Eliminados!', {
+      timeOut: 3000
+    });
  }
 
 }

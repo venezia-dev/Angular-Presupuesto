@@ -3,6 +3,7 @@ import { IngresoService } from '../ingreso/ingreso.service';
 import { EgresoService } from '../egreso/egreso.service';
 import { Ingreso } from 'src/app/models/Ingreso';
 import { Egreso } from 'src/app/models/Egreso';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-form',
@@ -15,8 +16,11 @@ export class FormComponent implements OnInit {
   description: string;
   value: number;
 
-  constructor(private ingresoService: IngresoService,
-    private egresoService: EgresoService) { }
+  constructor(
+    private ingresoService: IngresoService,
+    private egresoService: EgresoService,
+    private toastrService: ToastrService
+    ) { }
 
   ngOnInit() {
   }
@@ -28,8 +32,14 @@ export class FormComponent implements OnInit {
   addValue(){
     if(this.type === "ingresoOperation"){
       this.ingresoService.ingresos.push(new Ingreso(this.description, this.value));
+      this.toastrService.success('Registro de Ingreso', 'Ingresado!', {
+        timeOut: 3000
+      });
     } else {
       this.egresoService.egresos.push(new Egreso(this.description, this.value));
+      this.toastrService.success('Registro de Egreso', 'Ingresado!', {
+        timeOut: 3000
+      });
     }
   }
 

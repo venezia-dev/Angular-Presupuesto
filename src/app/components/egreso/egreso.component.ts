@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Egreso } from 'src/app/models/Egreso';
 import { EgresoService } from './egreso.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-egreso',
@@ -15,7 +16,8 @@ export class EgresoComponent implements OnInit {
   
 
   constructor(
-    private egresoService: EgresoService
+    private egresoService: EgresoService,
+    private toastrService: ToastrService
   ) { }
 
   ngOnInit() {
@@ -24,6 +26,9 @@ export class EgresoComponent implements OnInit {
   //Eliminar Egresos
   deleteRegister(egreso: Egreso){
     this.egresoService.delete(egreso);
+    this.toastrService.error('Registro de Egreso', 'Eliminado!', {
+      timeOut: 3000
+    });
   }
   //Calcular Porcentaje del Ingreso Total
   calcPorcentaje(egreso:Egreso){
