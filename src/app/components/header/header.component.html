@@ -1,16 +1,16 @@
 <mat-card class="header">
     <mat-card-header>
-        <mat-card-title><b>Calcular Presupuesto</b></mat-card-title>
+        <mat-card-title><button mat-raised-button color="primary">Calcular Presupuesto</button></mat-card-title>
     </mat-card-header>
     <mat-card-content>
             <div class="total"><b>Total: {{presupuestoTotal | currency: 'ARS':'$':'1.2-2'}}</b></div>
         <div fxLayout="row wrap" fxLayoutAlign="center">
-        <button mat-flat-button color="accent" class="ingresos">
+        <div class="ingresos">
             Ingresos: {{ingresoTotal | currency: 'ARS':'$':'1.2-2'}}
-        </button>
-        <button mat-flat-button color="warn" class="egresos" >
+        </div>
+        <div mat-flat-button color="warn" class="egresos" >
             Egresos: - {{egresoTotal | currency: 'ARS':'$':'1.2-2'}} ({{porcentajeTotal | percent}})
-        </button>
+        </div>
     </div>
     </mat-card-content>
     <mat-card-actions>

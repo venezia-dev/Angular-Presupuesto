@@ -1,7 +1,9 @@
 <mat-card class="form">
-    <mat-card-header><b>Formulario</b></mat-card-header>
+    <mat-card-header>
+        <mat-card-title><button mat-raised-button color="primary">Formulario</button></mat-card-title>
+    </mat-card-header>
     <form (ngSubmit)="f.form.valid && addValue(); f.reset()" #f="ngForm">
-        <mat-form-field>
+        <mat-form-field class="select">
             <mat-label>Ingresos / Egresos</mat-label>
             <mat-select (selectionChange)="operation($event.value)">
                 <mat-option value="ingresoOperation" selected>
@@ -25,8 +27,11 @@
             [(ngModel)]="value"
             placeholder="Agregar Valor" maxlength="12" required>
         </mat-form-field>
-        <button type="submit" mat-fab color="primary" class="done">
-            <mat-icon>done</mat-icon>
-        </button>
+        <div>
+            <button type="submit" mat-fab color="primary" class="done">
+                <mat-icon>done</mat-icon>
+            </button>
+        </div>
+
     </form>
 </mat-card>
