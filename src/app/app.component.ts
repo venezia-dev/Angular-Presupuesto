@@ -41,7 +41,11 @@ export class AppComponent {
   }
 
   getPorcentajeTotal(){
-    return this.getEgresoTotal()/this.getIngresoTotal();
+    if (this.getIngresoTotal() === 0){
+      return 0;
+    } else {
+      return this.getEgresoTotal()/this.getIngresoTotal();
+    }
   }
 
   getPresupuestoTotal(){

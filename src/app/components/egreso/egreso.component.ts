@@ -13,7 +13,6 @@ export class EgresoComponent implements OnInit {
   egresos: Egreso[]=[];
 
   @Input() ingresoTotal: number;
-  
 
   constructor(
     private egresoService: EgresoService,
@@ -23,6 +22,7 @@ export class EgresoComponent implements OnInit {
   ngOnInit() {
     this.egresos = this.egresoService.egresos;
   }
+  
   //Eliminar Egresos
   deleteRegister(egreso: Egreso){
     this.egresoService.delete(egreso);
@@ -32,7 +32,11 @@ export class EgresoComponent implements OnInit {
   }
   //Calcular Porcentaje del Ingreso Total
   calcPorcentaje(egreso:Egreso){
-    return egreso.value/this.ingresoTotal;
+    if (this.ingresoTotal === 0){
+      return 0
+    } else {
+      return egreso.value/this.ingresoTotal;
+    }
   }
 
 }

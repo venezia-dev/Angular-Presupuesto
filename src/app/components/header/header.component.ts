@@ -15,7 +15,6 @@ export class HeaderComponent implements OnInit {
   @Input() egresoTotal: number;
   @Input() porcentajeTotal: number;
 
-
   constructor(
     private ingresoService: IngresoService,
     private egresoService: EgresoService,
